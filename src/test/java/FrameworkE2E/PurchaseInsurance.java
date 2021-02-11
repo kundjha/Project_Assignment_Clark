@@ -90,6 +90,7 @@ public class PurchaseInsurance extends Base {
 		cl.isPublicServiceEmp(driver, pubServiceEmp);
 		String selbstbeteiligung=testdata.get(13);
 		cl.needSelbstbeteiligung(driver, selbstbeteiligung);
+		cl.ShowMyOffers(driver);
 		
 		//String isPensionar=testdata.get(12);
 		

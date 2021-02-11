@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObject.DetailsSubmittedPage;
 import pageObject.LandingPage;
 import pageObject.OfferTypePage;
 import pageObject.QuestionairePage;
@@ -125,6 +126,36 @@ public class CommonLibrary {
 			return false;
 		}
     }
+	public boolean ShowMyOffers(WebDriver driver)
+	{
+		DetailsSubmittedPage dp=new DetailsSubmittedPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		try {
+			WebElement goForInsDetails=dp.DeinAngebot();
+			wait.until(ExpectedConditions.visibilityOf(goForInsDetails));
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+			
+		}
+		try {
+		 
+			dp.ZumAngebot().click();
+			return true;
+			
+		}
+		
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+		}
+    }
+
+	
+	
 	public boolean BeginQuestion(WebDriver driver)
 	{
 		OfferTypePage ot=new OfferTypePage(driver);

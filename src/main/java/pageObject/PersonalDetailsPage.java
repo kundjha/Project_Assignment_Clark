@@ -18,6 +18,8 @@ By txtOrt=By.xpath("//input[@name='city']");
 By txtGeburtsdaturm=By.xpath("//input[@name='birthdate']");
 By txtTelefonenummer=By.xpath("//input[@name='phoneNumber']");
 By btnSubmit=By.xpath("//button[@type='submit']");
+By insPlan=By.cssSelector("._plan-name_vl28qq");
+By insPrice=By.cssSelector("._price_vl28qq");
 
 public PersonalDetailsPage(WebDriver driver) {
 	// TODO Auto-generated constructor stub
@@ -67,6 +69,15 @@ public WebElement Telefonenummer()
 public WebElement SubmitPersonalInfo()
 {
 	return driver.findElement(btnSubmit);
+}
+
+public WebElement InsPlanPersonalInfo()
+{
+	return driver.findElement(insPlan);
+}
+public WebElement InsPricePersonalInfo()
+{
+	return driver.findElement(insPrice);
 }
 
 }

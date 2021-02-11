@@ -91,7 +91,50 @@ public class PurchaseInsurance extends Base {
 		String selbstbeteiligung=testdata.get(13);
 		cl.needSelbstbeteiligung(driver, selbstbeteiligung);
 		cl.ShowMyOffers(driver);
+		System.out.println(od.InsCompEmpfehlung().getText());
+		System.out.println(od.PlanEmpfehlung().getText());
+		System.out.println(od.PriceEmpfehlung().getText());
+		System.out.println(od.InsCompSparangebot().getText());
+		System.out.println(od.PlanSparangebot().getText());
+		System.out.println(od.PriceSparangebot().getText());
+		System.out.println(od.InsCompTopLeistung().getText());
+		System.out.println(od.PlanTopLeistung().getText());
+		System.out.println(od.PriceTopLeistung().getText());
+		od.FirstOffer().click();
+		rp.userid().sendKeys(testdata.get(1));
+		rp.password().sendKeys(testdata.get(2));
+		rp.SubmitRegistration().click();		
+		driver.manage().window().maximize();
+		Actions a=new Actions(driver);
 		
+		WebElement Frau=pd.Frau();
+		a.moveToElement(Frau).sendKeys(Keys.ENTER);
+		
+		Frau.click();
+		pd.FirstName().sendKeys(testdata.get(3));
+		pd.StrasseName().sendKeys(testdata.get(4));
+		a.sendKeys(Keys.ESCAPE);
+		pd.HouseNumber().sendKeys(testdata.get(5));
+		a.sendKeys(Keys.ESCAPE);
+		pd.NachName().sendKeys(testdata.get(6));
+		a.sendKeys(Keys.ESCAPE);
+		pd.zipcode().sendKeys(zipcode);
+		a.sendKeys(Keys.ESCAPE);
+		pd.ort().sendKeys(testdata.get(7));
+		a.sendKeys(Keys.ENTER);
+		pd.Telefonenummer().sendKeys(telefoneNummer);
+		a.sendKeys(Keys.ENTER);
+		pd.BirthDate().sendKeys(testdata.get(8));
+		a.sendKeys(Keys.ENTER);
+		System.out.println(pd.InsPlanPersonalInfo().getText());
+		System.out.println(pd.InsPricePersonalInfo().getText());
+		pd.SubmitPersonalInfo().click();
+		start.StartNextWd().click();
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,1000)");
+		start.PreviousDamage().click();
+		System.out.println(start.InsPlan().getText());
+		System.out.println(start.InsPrice().getText());
 		//String isPensionar=testdata.get(12);
 		
 		/*

@@ -6,115 +6,118 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Utility.Generic;
+
 public class OfferDetailsPage {
 public WebDriver driver;
 
-By choice1=By.xpath("//section[@class='offer-header _header_2yb545']/div/div[1]/div[2]/div[1]/button");
-By insCompSparangebot=By.xpath("//div[@class='_options_2yb545']/div[1]/p[1]");
-By insCompEmpfehlung=By.xpath("//div[@class='_options_2yb545']/div[2]/p[1]");
-By insCompTopLeistung=By.xpath("//div[@class='_options_2yb545']/div[3]/p[1]");
-By planSparangebot=By.xpath("//div[@class='_options_2yb545']/div[1]/p[2]");
-By planEmpfehlung=By.xpath("//div[@class='_options_2yb545']/div[2]/p[2]");
-By planTopLeistung=By.xpath("//div[@class='_options_2yb545']/div[3]/p[2]");
-By priceSparangebot=By.xpath("//div[@class='_options_2yb545']/div[1]/div[2]/p[1]");
-By priceEmpfehlung=By.xpath("//div[@class='_options_2yb545']/div[2]/div[2]/p[1]");
-By priceTopLeistung=By.xpath("//div[@class='_options_2yb545']/div[3]/div[2]/p[1]");
-By buttonSparangebot=By.xpath("//div[@class='_options_2yb545']/div[1]/button");
-By buttonEmpfehlung=By.xpath("//div[@class='_options_2yb545']/div[2]/button");
-By buttonTopLeistung=By.xpath("//div[@class='_options_2yb545']/div[3]/button");
-
-
+String choice1="xpath_//section[@class='offer-header _header_2yb545']/div/div[1]/div[2]/div[1]/button";
+String insCompSparangebot="xpath_//div[@class='_options_2yb545']/div[1]/p[1]";
+String insCompEmpfehlung="xpath_//div[@class='_options_2yb545']/div[2]/p[1]";
+String insCompTopLeistung="xpath_//div[@class='_options_2yb545']/div[3]/p[1]";
+String planSparangebot="xpath_//div[@class='_options_2yb545']/div[1]/p[2]";
+String planEmpfehlung="xpath_//div[@class='_options_2yb545']/div[2]/p[2]";
+String planTopLeistung="xpath_//div[@class='_options_2yb545']/div[3]/p[2]";
+String priceSparangebot="xpath_//div[@class='_options_2yb545']/div[1]/div[2]/p[1]";
+String priceEmpfehlung="xpath_//div[@class='_options_2yb545']/div[2]/div[2]/p[1]";
+String priceTopLeistung="xpath_//div[@class='_options_2yb545']/div[3]/div[2]/p[1]";
+String btnSparangebot="xpath_//div[@class='_options_2yb545']/div[1]/button";
+String btnEmpfehlung="xpath_//div[@class='_options_2yb545']/div[2]/button";
+String btnTopLeistung="xpath_//div[@class='_options_2yb545']/div[3]/button";
+String title="class__title_2yb545";
 
 public OfferDetailsPage(WebDriver driver) {
 	// TODO Auto-generated constructor stub
 	this.driver=driver;
 }
 
-public WebElement FirstOffer()
-{
-	return driver.findElement(choice1);
-}
 
 public WebElement PlanSparangebot()
 {
 
-	return driver.findElement(planSparangebot);
+	return Generic.getAnyElementByAnyLocator(driver, planSparangebot);
 	
 }
 
 public WebElement PlanEmpfehlung()
 {
 
-	return driver.findElement(planEmpfehlung);
+	return Generic.getAnyElementByAnyLocator(driver, planEmpfehlung);
 	
 }
 
 public WebElement PlanTopLeistung()
 {
 
-	return driver.findElement(planTopLeistung);
+	return Generic.getAnyElementByAnyLocator(driver, planTopLeistung);
 	
 }
 
 public WebElement PriceSparangebot()
 {
 
-	return driver.findElement(priceSparangebot);
+	return Generic.getAnyElementByAnyLocator(driver, priceSparangebot);
 	
 }
 public WebElement PriceEmpfehlung()
 {
 
-	return driver.findElement(priceEmpfehlung);
+	return Generic.getAnyElementByAnyLocator(driver, priceEmpfehlung);
 	
 }
 
 public WebElement PriceTopLeistung()
 {
 
-	return driver.findElement(priceTopLeistung);
+	return Generic.getAnyElementByAnyLocator(driver, priceTopLeistung);
 	
 }
 
 public WebElement ButtonSparangebot()
 {
 
-	return driver.findElement(buttonSparangebot);
+	return Generic.getAnyElementByAnyLocator(driver,btnSparangebot);
 	
 }
 public WebElement ButtonEmpfehlung()
 {
 
-	return driver.findElement(buttonEmpfehlung);
+	return Generic.getAnyElementByAnyLocator(driver, btnEmpfehlung);
 	
 }
 
 public WebElement ButtonTopLeistung()
 {
 
-	return driver.findElement(buttonTopLeistung);
+	return Generic.getAnyElementByAnyLocator(driver, btnTopLeistung);
 	
 }
 public WebElement InsCompSparangebot()
 {
 
-	return driver.findElement(insCompSparangebot);
+	return Generic.getAnyElementByAnyLocator(driver, insCompSparangebot);
 	
 }
 public WebElement InsCompEmpfehlung()
 {
 
-	return driver.findElement(insCompEmpfehlung);
+	return Generic.getAnyElementByAnyLocator(driver, insCompEmpfehlung);
 	
 }
 
 public WebElement InsCompTopLeistung()
 {
 
-	return driver.findElement(insCompTopLeistung);
+	return Generic.getAnyElementByAnyLocator(driver, insCompTopLeistung);
 	
 }
 
+public WebElement Title()
+{
+
+	return Generic.getAnyElementByAnyLocator(driver, title);
+	
+}
 
 
 }

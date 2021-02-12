@@ -4,22 +4,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Utility.Generic;
+
 public class PersonalDetailsPage {
 public WebDriver driver;
 
-By radioHerr=By.xpath("//input[@value='male']");
-By radioFrau=By.xpath("//ul[@class='_choices_1sjhfx']/li[2]");
-By txtVorname=By.xpath("//input[@name='firstName']");
-By txtStrasse=By.xpath("//input[@name='street']");
-By txtHaunr=By.xpath("//input[@name='houseNumber']");
-By txtNachName=By.xpath("//input[@name='lastName']");
-By txtPlz=By.xpath("//input[@name='zipcode']");
-By txtOrt=By.xpath("//input[@name='city']");
-By txtGeburtsdaturm=By.xpath("//input[@name='birthdate']");
-By txtTelefonenummer=By.xpath("//input[@name='phoneNumber']");
-By btnSubmit=By.xpath("//button[@type='submit']");
-By insPlan=By.cssSelector("._plan-name_vl28qq");
-By insPrice=By.cssSelector("._price_vl28qq");
+String radioHerr="xpath_//input[@value='male']";
+String radioFrau="xpath_//ul[@class='_choices_1sjhfx']/li[2]";
+String txtVorname="xpath_//input[@name='firstName']";
+String txtStrasse="xpath_//input[@name='street']";
+String txtHaunr="xpath_//input[@name='houseNumber']";
+String txtNachName="xpath_//input[@name='lastName']";
+String txtPlz="xpath_//input[@name='zipcode']";
+String txtOrt="xpath_//input[@name='city']";
+String txtGeburtsdaturm="xpath_//input[@name='birthdate']";
+String txtTelefonenummer="xpath_//input[@name='phoneNumber']";
+String btnSubmit="xpath_//button[@type='submit']";
+String insPlan="css_._plan-name_vl28qq";
+String insPrice="css_._price_vl28qq";
 
 public PersonalDetailsPage(WebDriver driver) {
 	// TODO Auto-generated constructor stub
@@ -28,56 +30,57 @@ public PersonalDetailsPage(WebDriver driver) {
 
 public WebElement Herr()
 {
-	return driver.findElement(radioHerr);
+	return Generic.getAnyElementByAnyLocator(driver, radioHerr);
 }
 public WebElement Frau()
 {
-	return driver.findElement(radioFrau);
+	return Generic.getAnyElementByAnyLocator(driver, radioFrau);
 }
 public WebElement FirstName()
 {
-	return driver.findElement(txtVorname);
+	return Generic.getAnyElementByAnyLocator(driver, txtVorname);
 }
 public WebElement StrasseName()
 {
-	return driver.findElement(txtStrasse);
+	return Generic.getAnyElementByAnyLocator(driver, txtStrasse);
 }
 public WebElement HouseNumber()
 {
-	return driver.findElement(txtHaunr);
+	return Generic.getAnyElementByAnyLocator(driver, txtHaunr);
 }
 public WebElement NachName()
 {
-	return driver.findElement(txtNachName);
+	return Generic.getAnyElementByAnyLocator(driver, txtNachName);
 }
 public WebElement zipcode()
 {
-	return driver.findElement(txtPlz);
+	return Generic.getAnyElementByAnyLocator(driver, txtPlz);
 }
 public WebElement ort()
 {
-	return driver.findElement(txtOrt);
+	return Generic.getAnyElementByAnyLocator(driver, txtOrt);
 }
 public WebElement BirthDate()
 {
-	return driver.findElement(txtGeburtsdaturm);
+	return Generic.getAnyElementByAnyLocator(driver, txtGeburtsdaturm);
+	
 }
 public WebElement Telefonenummer()
 {
-	return driver.findElement(txtTelefonenummer);
+	return Generic.getAnyElementByAnyLocator(driver, txtTelefonenummer);
 }
 public WebElement SubmitPersonalInfo()
 {
-	return driver.findElement(btnSubmit);
+	return Generic.getAnyElementByAnyLocator(driver, btnSubmit);
 }
 
 public WebElement InsPlanPersonalInfo()
 {
-	return driver.findElement(insPlan);
+	return Generic.getAnyElementByAnyLocator(driver,insPlan);
 }
 public WebElement InsPricePersonalInfo()
 {
-	return driver.findElement(insPrice);
+	return Generic.getAnyElementByAnyLocator(driver,insPrice);
 }
 
 }

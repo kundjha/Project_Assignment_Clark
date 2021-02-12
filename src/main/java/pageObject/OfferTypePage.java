@@ -4,10 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Utility.Generic;
+
 public class OfferTypePage {
 public WebDriver driver;
-By optionPrivathaftpflicht=By.xpath("//div[@role='presentation']//div[1]//div[1]//div[1]//div[1]");
-By btnBeginQuestions=By.xpath("//button[@id='ember26']");
+String optionPrivathaftpflicht="xpath_//div[@role='presentation']//div[1]//div[1]//div[1]//div[1]";
+String btnBeginQuestions="xpath_//button[@id='ember26']";
 
 
 public OfferTypePage(WebDriver driver) {
@@ -19,13 +21,13 @@ public OfferTypePage(WebDriver driver) {
 public WebElement optforPrivathaftpflicht()
 {
 	//System.out.println(" I am here ");
-	return driver.findElement(optionPrivathaftpflicht);
+	return Generic.getAnyElementByAnyLocator(driver, optionPrivathaftpflicht);
 }
 
 public WebElement BeginQuestion()
 {
 	//System.out.println(" I am here ");
-	return driver.findElement(btnBeginQuestions);
+	return Generic.getAnyElementByAnyLocator(driver, btnBeginQuestions);
 }
 
 }

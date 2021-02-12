@@ -1,5 +1,7 @@
 package utilities;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -7,8 +9,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObject.DetailsSubmittedPage;
 import pageObject.LandingPage;
+import pageObject.OfferDetailsPage;
 import pageObject.OfferTypePage;
 import pageObject.QuestionairePage;
+import pageObject.RegistrationPage;
 
 public class CommonLibrary {
 	//public static WebDriver driver;
@@ -64,7 +68,7 @@ public class CommonLibrary {
 			return false;
 		}
     }
-	public boolean isPublicServiceEmp(WebDriver driver,String isPublicServant)
+	public boolean IsPublicServiceEmp(WebDriver driver,String isPublicServant)
 	{
 		QuestionairePage qp=new QuestionairePage(driver);
 		WebDriverWait wait = new WebDriverWait(driver,30);
@@ -92,7 +96,7 @@ public class CommonLibrary {
 			return false;
 		}
     }
-	public boolean needSelbstbeteiligung(WebDriver driver,String needSelbsteidlung)
+	public boolean NeedSelbstbeteiligung(WebDriver driver,String needSelbsteidlung)
 	{
 		QuestionairePage qp=new QuestionairePage(driver);
 		WebDriverWait wait = new WebDriverWait(driver,30);
@@ -170,5 +174,58 @@ public class CommonLibrary {
 		}
     }
 	
-	
+	public boolean SelectOffer(WebDriver driver,String offerType)
+	{
+		
+		
+		OfferDetailsPage od=new OfferDetailsPage(driver);
+		
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		try {
+			WebElement title=od.Title();
+			wait.until(ExpectedConditions.visibilityOf(title));
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+			
+		}
+		try {
+			if(offerType.equalsIgnoreCase("Sparangebot"))
+			{
+				od.ButtonSparangebot().click();
+			}
+			else if(offerType.equalsIgnoreCase("Empfehlung"))
+			{
+				od.ButtonEmpfehlung().click();
+			}
+			else if(offerType.equalsIgnoreCase("TopLeistung"))
+			{
+				od.ButtonTopLeistung().click();
+			}
+		return true;
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+		}
+	}
+		public boolean Register(WebDriver driver,String userId,String password)
+		{
+			RegistrationPage rp=new RegistrationPage(driver);
+			try {
+			rp.userid().sendKeys(userId);
+			rp.password().sendKeys(password);
+			rp.SubmitRegistration().click();
+			return true;
+			}
+			catch(Exception ex) {
+				
+				System.out.println(ex.getMessage());
+				return false;
+			}
+			
+        }
 }

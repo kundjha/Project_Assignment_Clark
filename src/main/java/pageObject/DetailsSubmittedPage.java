@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Utility.Generic;
+
 public class DetailsSubmittedPage {
 	
 	public WebDriver driver;
 	
-	By btnZumAngebot=By.xpath("//a[normalize-space()='Zum Angebot']");
-	By yourAngebot=By.xpath("//h1[normalize-space()='Dein Angebot ist da!']");
+	String btnZumAngebot="xpath_//a[normalize-space()='Zum Angebot']";
+	String yourAngebot="xpath_//h1[normalize-space()='Dein Angebot ist da!']";
 	
 	public DetailsSubmittedPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub
@@ -17,11 +19,11 @@ public class DetailsSubmittedPage {
 	}
 	public WebElement ZumAngebot()
 	{
-		return driver.findElement(btnZumAngebot);
+		return Generic.getAnyElementByAnyLocator(driver, btnZumAngebot);
 	}
 	public WebElement DeinAngebot()
 	{
-		return driver.findElement(yourAngebot);
+		return Generic.getAnyElementByAnyLocator(driver, yourAngebot);
 	}
 	
 

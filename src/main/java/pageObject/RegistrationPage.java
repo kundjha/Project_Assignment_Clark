@@ -1,16 +1,16 @@
 package pageObject;
 
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import Utility.Generic;
 
 public class RegistrationPage {
 public WebDriver driver;
 
-By txtemail=By.xpath("//input[@type='email']");
-By txtpassord=By.xpath("//input[@type='password']");
-By btnRegister=By.xpath("//button[@type='submit']");
+String txtemail="xpath_//input[@type='email']";
+String txtpassord="xpath_//input[@type='password']";
+String btnRegister="xpath_//button[@type='submit']";
 
 
 public RegistrationPage(WebDriver driver) {
@@ -21,17 +21,17 @@ public RegistrationPage(WebDriver driver) {
 
 public WebElement userid()
 {
-	return driver.findElement(txtemail);
+	return Generic.getAnyElementByAnyLocator(driver, txtemail);
 }
 
 public WebElement password()
 {
-	return driver.findElement(txtpassord);
+	return Generic.getAnyElementByAnyLocator(driver, txtpassord);
 }
 
 public WebElement SubmitRegistration()
 {
-	return driver.findElement(btnRegister);
+	return Generic.getAnyElementByAnyLocator(driver, btnRegister);
 }
 
 }

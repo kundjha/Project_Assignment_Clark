@@ -1,20 +1,20 @@
 package pageObject;
 
-import org.openqa.selenium.By;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import Utility.Generic;
 
 public class StartDatePage {
 public WebDriver driver;
 
 
-By radioNextWorkingDay=By.xpath("//div[@class='_form-fields_y7l2mq']/div[1]/fieldset/ul/li[1]/label/span[1]");
-By radioPreDamage=By.xpath("//div[@class='_form-fields_y7l2mq']/div[2]/fieldset/ul/li[1]/label/span[1]");
-By btnSubmit=By.xpath("//button[@type='submit']");
-By insPlan=By.cssSelector("._plan-name_vl28qq");
-By insPrice=By.cssSelector("._price_vl28qq");
-//button[@type='submit']
-
+String radioNextWorkingDay="xpath_//div[@class='_form-fields_y7l2mq']/div[1]/fieldset/ul/li[1]/label/span[1]";
+String radioPreDamage="xpath_//div[@class='_form-fields_y7l2mq']/div[2]/fieldset/ul/li[1]/label/span[1]";
+String btnSubmit="xpath_//button[@type='submit']";
+String insPlan="css_._plan-name_vl28qq";
+String insPrice="css_._price_vl28qq";
 
 public StartDatePage(WebDriver driver) {
 	// TODO Auto-generated constructor stub
@@ -24,26 +24,26 @@ public StartDatePage(WebDriver driver) {
 
 public WebElement StartNextWd()
 {
-	return driver.findElement(radioNextWorkingDay);
+	return Generic.getAnyElementByAnyLocator(driver, radioNextWorkingDay);
 }
 
 public WebElement PreviousDamage()
 {
-	return driver.findElement(radioPreDamage);
+	return Generic.getAnyElementByAnyLocator(driver, radioPreDamage);
 }
 public WebElement SubmitStartDate()
 {
-	return driver.findElement(btnSubmit);
+	return Generic.getAnyElementByAnyLocator(driver, btnSubmit);
 }
 
 public WebElement InsPlan()
 {
-	return driver.findElement(insPlan);
+	return Generic.getAnyElementByAnyLocator(driver, insPlan);
 }
 
 public WebElement InsPrice()
 {
-	return driver.findElement(insPrice);
+	return Generic.getAnyElementByAnyLocator(driver, insPrice);
 }
 
 }

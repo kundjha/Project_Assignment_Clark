@@ -1,9 +1,12 @@
 package utilities;
 
+import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,12 +14,13 @@ import pageObject.DetailsSubmittedPage;
 import pageObject.LandingPage;
 import pageObject.OfferDetailsPage;
 import pageObject.OfferTypePage;
+import pageObject.PersonalDetailsPage;
 import pageObject.QuestionairePage;
 import pageObject.RegistrationPage;
 
 public class CommonLibrary {
 	//public static WebDriver driver;
-	public boolean ListAngebote(WebDriver driver)
+	public static boolean ListAngebote(WebDriver driver)
 	{
 		try {
 		LandingPage l = new LandingPage(driver);
@@ -191,6 +195,15 @@ public class CommonLibrary {
 			return false;
 			
 		}
+		System.out.println(od.InsCompEmpfehlung().getText());
+		System.out.println(od.PlanEmpfehlung().getText());
+		System.out.println(od.PriceEmpfehlung().getText());
+		System.out.println(od.InsCompSparangebot().getText());
+		System.out.println(od.PlanSparangebot().getText());
+		System.out.println(od.PriceSparangebot().getText());
+		System.out.println(od.InsCompTopLeistung().getText());
+		System.out.println(od.PlanTopLeistung().getText());
+		System.out.println(od.PriceTopLeistung().getText());
 		try {
 			if(offerType.equalsIgnoreCase("Sparangebot"))
 			{
@@ -219,6 +232,45 @@ public class CommonLibrary {
 			rp.userid().sendKeys(userId);
 			rp.password().sendKeys(password);
 			rp.SubmitRegistration().click();
+			return true;
+			}
+			catch(Exception ex) {
+				
+				System.out.println(ex.getMessage());
+				return false;
+			}
+			
+        }
+		
+		public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalDetails)
+		{
+			
+			PersonalDetailsPage pd=new PersonalDetailsPage(driver);
+			try {
+				Actions a=new Actions(driver);
+				
+				WebElement Frau=pd.Frau();
+				a.moveToElement(Frau).sendKeys(Keys.ENTER);
+				
+				Frau.click();
+				pd.FirstName().sendKeys(personalDetails.get(0));
+				pd.StrasseName().sendKeys(personalDetails.get(1));
+				a.sendKeys(Keys.ESCAPE);
+				pd.HouseNumber().sendKeys(personalDetails.get(2));
+				a.sendKeys(Keys.ESCAPE);
+				pd.NachName().sendKeys(personalDetails.get(3));
+				a.sendKeys(Keys.ESCAPE);
+				pd.zipcode().sendKeys(personalDetails.get(6));
+				a.sendKeys(Keys.ESCAPE);
+				pd.ort().sendKeys(personalDetails.get(4));
+				a.sendKeys(Keys.ENTER);
+				pd.Telefonenummer().sendKeys(personalDetails.get(7));
+				a.sendKeys(Keys.ENTER);
+				pd.BirthDate().sendKeys(personalDetails.get(5));
+				a.sendKeys(Keys.ENTER);
+				System.out.println(pd.InsPlanPersonalInfo().getText());
+				System.out.println(pd.InsPricePersonalInfo().getText());
+				pd.SubmitPersonalInfo().click();
 			return true;
 			}
 			catch(Exception ex) {

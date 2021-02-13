@@ -6,7 +6,10 @@
   </listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="FrameworkE2E.PurchaseInsurance"/>
+      <class name="FrameworkE2E.PurchaseInsurance_Single"/>
+      <class name="FrameworkE2E.PurchaseInsurance_FamilieMitKindern"/>
+      <class name="FrameworkE2E.PurchaseInsurance_PahrOhneKids"/>
+      <class name="FrameworkE2E.PurchaseInsurance_SingleMitKindern"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

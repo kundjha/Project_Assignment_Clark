@@ -57,13 +57,27 @@ public class CommonLibrary {
 	{
 		QuestionairePage qp=new QuestionairePage(driver);
 		try {
-		if(inscategory.equalsIgnoreCase("Single"))
-		{
 			WebDriverWait wait = new WebDriverWait(driver,30);
 			WebElement whoAreCovered=qp.WhoAreCovered();
 			wait.until(ExpectedConditions.visibilityOf(whoAreCovered));
+		if(inscategory.equalsIgnoreCase("Single"))
+		{
+			
 			qp.FirstAnswer().click();
 		}
+		else if(inscategory.equalsIgnoreCase("FamilieMitKindern"))
+		{
+			qp.SecondAnswer().click();;
+		}
+		else if(inscategory.equalsIgnoreCase("PahrOhneKids"))
+		{		
+			qp.ThirdAnswer().click();
+		}
+		else if(inscategory.equalsIgnoreCase("SingleMitKindern"))
+		{		
+			qp.FourthAnswer().click();
+		}
+		
 		return true;
 		}
         catch(Exception ex) {
@@ -88,10 +102,54 @@ public class CommonLibrary {
 		try {
 		if(isPublicServant.equalsIgnoreCase("Ja"))
 		{   
-				
-			WebElement publicService=qp.FirstAnswer();
-			publicService.click();
+			
+			qp.FirstAnswer().click();
+		
 		}
+		else if(isPublicServant.equalsIgnoreCase("Nein"))
+		{   
+				
+			qp.SecondAnswer().click();
+		}
+		
+		return true;
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+		}
+    }
+	public boolean IsPensionar(WebDriver driver,String isPensionar)
+	{
+		QuestionairePage qp=new QuestionairePage(driver);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		try {
+			WebElement pensioninfo=qp.PensionInfo();
+			wait.until(ExpectedConditions.visibilityOf(pensioninfo));
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+		}
+		try {
+		if(isPensionar.equalsIgnoreCase("Ja"))
+		{   
+			WebElement angebot=qp.AngebotAnfordern();	
+			qp.FirstAnswer().click();
+			wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+			angebot.click();
+		
+		}
+		else if(isPensionar.equalsIgnoreCase("Nein"))
+		{   
+			WebElement angebot=qp.AngebotAnfordern();	
+			qp.SecondAnswer().click();
+			wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+			angebot.click();
+		}
+		
 		return true;
 		}
         catch(Exception ex) {
@@ -107,6 +165,7 @@ public class CommonLibrary {
 		try {
 			WebElement qSelbSteidlung=qp.isSelbstbeteiligung();
 			wait.until(ExpectedConditions.visibilityOf(qSelbSteidlung));
+			qp.FirstAnswer().click();
 		}
         catch(Exception ex) {
 			
@@ -115,15 +174,21 @@ public class CommonLibrary {
 			
 		}
 		try {
+			
 		if(needSelbsteidlung.equalsIgnoreCase("Ja"))
 		{   
-				
-			WebElement yesSelbSteidlung=qp.FirstAnswer();
-			yesSelbSteidlung.click();
 			WebElement angebot=qp.AngebotAnfordern();
-			wait.until(ExpectedConditions.elementToBeClickable(angebot));
-			angebot.click();
 			
+			qp.FirstAnswer().click();
+			wait.until(ExpectedConditions.elementToBeClickable(angebot));
+			angebot.click();	
+		}
+		else if(needSelbsteidlung.equalsIgnoreCase("Nein"))
+		{   
+			WebElement angebot=qp.AngebotAnfordern();	
+			qp.SecondAnswer().click();
+			wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+			angebot.click();	
 		}
 		return true;
 		

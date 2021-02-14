@@ -1,6 +1,7 @@
 package pageObject;
 
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -46,5 +47,28 @@ public WebElement InsPrice()
 	return Generic.getAnyElementByAnyLocator(driver, insPrice);
 }
 
+public boolean provideStartDateDetails(WebDriver driver)
+{
+	try {
+	StartNextWd().click();
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0,1000)");
+	PreviousDamage().click();
+	SubmitStartDate().click();
+	return true;
+	}
+	
+	catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	
 }
 
+}
+/*start.StartNextWd().click();
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript("window.scrollBy(0,1000)");
+start.PreviousDamage().click();
+start.SubmitStartDate().click();*/

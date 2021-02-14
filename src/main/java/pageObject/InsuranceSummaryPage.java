@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -23,6 +24,22 @@ public WebElement SubmitSummary()
 {
 	return Generic.getAnyElementByAnyLocator(driver, btnSubmit);
 }
+
+public boolean acceptInsurance(WebDriver driver)
+{
+	try {
+	SubmitSummary().click();
+	return true;
+	}
+	
+	catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	
+}
+
 
 }
 

@@ -13,50 +13,44 @@ public class stepDefination extends Base {
 
 
 
-    @Given("^Initialize the Browser with Chrome$")
-    public void initialize_the_browser_with_chrome() throws Throwable {
-        
-    }
+	@Given("Navigate to ClarkHomePage")
+	public void navigate_to_ClarkHomePage() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @When("^user selects Single$")
-    public void user_selects_single() throws Throwable {
-       
-    }
+	@Given("user clicks on Angebote menu item")
+	public void user_clicks_on_Angebote_menu_item() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @Then("^user is able to purchase insurance$")
-    public void user_is_able_to_purchase_insurance() throws Throwable {
-       
-    }
+	@Given("user selects Privathaftpflicht in insurance type page")
+	public void user_selects_Privathaftpflicht_in_insurance_type_page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @And("^Navigate to \"([^\"]*)\"$")
-    public void navigate_to_something(String strArg1) throws Throwable {
-        
-    }
+	@When("User Selects Yes Emeployed in public service")
+	public void user_Selects_Yes_Emeployed_in_public_service() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @And("^User clicks Akzeptieren button$")
-    public void user_clicks_akzeptieren_button() throws Throwable {
-        
-    }
+	@When("user selects  Yes in Sellbeteiligung")
+	public void user_selects_Yes_in_Sellbeteiligung() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @And("^user clicks on Angebote menu item $")
-    public void user_clicks_on_angebote_menu_item() throws Throwable {
-        
-    }
+	@Then("Selected insurance is displayed in the management Page")
+	public void selected_insurance_is_displayed_in_the_management_Page() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new cucumber.api.PendingException();
+	}
 
-    @And("^user selects \"([^\"]*)\" in insurance type page  $")
-    public void user_selects_something_in_insurance_type_page(String strArg1) throws Throwable {
-        
-    }
 
-    @And("^User Selects Emeployed in public service$")
-    public void user_selects_emeployed_in_public_service() throws Throwable {
-        
-    }
-
-    @And("^user selects Sellbeteiligung$")
-    public void user_selects_sellbeteiligung() throws Throwable {
-        
-    }
+    
 
 
 

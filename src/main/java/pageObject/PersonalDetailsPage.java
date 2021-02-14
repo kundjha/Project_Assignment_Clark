@@ -86,35 +86,53 @@ public WebElement InsPricePersonalInfo()
 	return Generic.getAnyElementByAnyLocator(driver,insPrice);
 }
 
-public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalDetails)
+public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalInfodata)
 {
 	
 	PersonalDetailsPage pd=new PersonalDetailsPage(driver);
+	String zipcode=personalInfodata.get(16);
+	String telefoneNummer=personalInfodata.get(17);	
+	
 	try {
 		Actions a=new Actions(driver);
+		ArrayList<String> personalinfo=new ArrayList<String>();
+		for (int k=0;k<=10;k++)
+		{
+			personalinfo.add("NULL");
+		}
+		int j=3;
 		
+		for (int i=0;i<=5;i++)
+		{
+					
+				personalinfo.set(i,personalInfodata.get(j));
+				j++;
+			
+		}
+		personalinfo.set(6, zipcode);
+		personalinfo.set(7, telefoneNummer);
 		WebElement Frau=pd.Frau();
 		a.moveToElement(Frau).sendKeys(Keys.ENTER);
 		
 		Frau.click();
-		pd.FirstName().sendKeys(personalDetails.get(0));
-		pd.StrasseName().sendKeys(personalDetails.get(1));
+		pd.FirstName().sendKeys(personalinfo.get(0));
+		pd.StrasseName().sendKeys(personalinfo.get(1));
 		a.sendKeys(Keys.ESCAPE);
-		pd.HouseNumber().sendKeys(personalDetails.get(2));
+		pd.HouseNumber().sendKeys(personalinfo.get(2));
 		a.sendKeys(Keys.ESCAPE);
-		pd.NachName().sendKeys(personalDetails.get(3));
+		pd.NachName().sendKeys(personalinfo.get(3));
 		a.sendKeys(Keys.ESCAPE);
-		pd.zipcode().sendKeys(personalDetails.get(6));
+		pd.zipcode().sendKeys(personalinfo.get(6));
 		a.sendKeys(Keys.ESCAPE);
-		pd.ort().sendKeys(personalDetails.get(4));
+		pd.ort().sendKeys(personalinfo.get(4));
 		a.sendKeys(Keys.ENTER);
-		pd.Telefonenummer().sendKeys(personalDetails.get(7));
+		pd.Telefonenummer().sendKeys(personalinfo.get(7));
 		a.sendKeys(Keys.ENTER);
-		pd.BirthDate().sendKeys(personalDetails.get(5));
+		pd.BirthDate().sendKeys(personalinfo.get(5));
 		a.sendKeys(Keys.ENTER);
-		System.out.println(pd.InsPlanPersonalInfo().getText());
-		System.out.println(pd.InsPricePersonalInfo().getText());
-		pd.SubmitPersonalInfo().click();
+		System.out.println(InsPlanPersonalInfo().getText());
+		System.out.println(InsPricePersonalInfo().getText());
+		SubmitPersonalInfo().click();
 	return true;
 	}
 	catch(Exception ex) {

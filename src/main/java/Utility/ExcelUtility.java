@@ -18,8 +18,8 @@ public class ExcelUtility {
 	{
 		//String tc="tc1";
 		ArrayList<String> data=new ArrayList<String>();
-		FileInputStream fis=new FileInputStream("C://TestData//TestData.xlsx");
-		
+		String filePath=System.getProperty("user.dir")+"\\excel\\TestData.xlsx";	
+		FileInputStream fis=new FileInputStream(filePath);
 		XSSFWorkbook workbook=new XSSFWorkbook(fis);
 		XSSFFormulaEvaluator.evaluateAllFormulaCells(workbook);
 		XSSFSheet sheet=workbook.getSheetAt(0);

@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -36,6 +37,24 @@ public WebElement SubmitBankDetails()
 {
 	return Generic.getAnyElementByAnyLocator(driver,btnSubmit);
 }
+
+public boolean provideBankDetails(WebDriver driver, String iban)
+{
+	try {
+		IbanInfo().sendKeys(iban);
+		DirectDebitMandate().click();
+		SubmitBankDetails().click();
+	return true;
+	}
+	
+	catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	
+}
+
 
 }
 

@@ -5,13 +5,9 @@
     <classes>
       <class name="FrameworkE2E.PurchaseInsurance_Single">
         <methods>
-          <include name="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible"/>
           <include name="initialize"/>
-          <include name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible"/>
           <include name="teardown"/>
           <include name="Purchase_PrivateIns_Single_PublicServant_YesDeductible"/>
-          <include name="Purchase_PrivateIns_Single_PublicServant_NoDeductible"/>
-          <include name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible"/>
         </methods>
       </class> <!-- FrameworkE2E.PurchaseInsurance_Single -->
     </classes>

@@ -27,7 +27,7 @@ public WebElement Angebote()
 	return Generic.getAnyElementByAnyLocator(driver, linkAngebote);
 }
 
-public static boolean ListAngebote(WebDriver driver)
+public boolean ListAngebote(WebDriver driver)
 {
 	try {
 	LandingPage l = new LandingPage(driver);

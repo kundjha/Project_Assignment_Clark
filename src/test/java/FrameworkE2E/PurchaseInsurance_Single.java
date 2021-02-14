@@ -27,7 +27,6 @@ public class PurchaseInsurance_Single extends Base {
 		
 	}
 	@Test(priority=1)
-	//This method is to Select Angebote and move to offer selection Page
 	public void Purchase_PrivateIns_Single_PublicServant_YesDeductible() throws Throwable
 	{
 		String filePath=System.getProperty("user.dir")+"\\Configuration\\config.properties";		

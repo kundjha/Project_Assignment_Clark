@@ -2,6 +2,8 @@ package pageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utility.Generic;
 
@@ -24,6 +26,36 @@ public class DetailsSubmittedPage {
 	{
 		return Generic.getAnyElementByAnyLocator(driver, yourAngebot);
 	}
+	
+	public boolean ShowMyOffers(WebDriver driver)
+	{
+		DetailsSubmittedPage dp=new DetailsSubmittedPage(driver);
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		try {
+			WebElement goForInsDetails=dp.DeinAngebot();
+			wait.until(ExpectedConditions.visibilityOf(goForInsDetails));
+		}
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+			
+		}
+		try {
+		 
+			dp.ZumAngebot().click();
+			return true;
+			
+		}
+		
+        catch(Exception ex) {
+			
+			System.out.println(ex.getMessage());
+			return false;
+		}
+    }
+
+	
 	
 
 }

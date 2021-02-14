@@ -2,6 +2,8 @@ package pageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utility.Generic;
 
@@ -115,6 +117,55 @@ public WebElement Title()
 	return Generic.getAnyElementByAnyLocator(driver, title);
 	
 }
+
+public boolean SelectOffer(WebDriver driver,String offerType)
+{
+	
+	
+	OfferDetailsPage od=new OfferDetailsPage(driver);
+	
+	WebDriverWait wait = new WebDriverWait(driver,30);
+	try {
+		WebElement title=od.Title();
+		wait.until(ExpectedConditions.visibilityOf(title));
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+		
+	}
+	System.out.println(od.InsCompEmpfehlung().getText());
+	System.out.println(od.PlanEmpfehlung().getText());
+	System.out.println(od.PriceEmpfehlung().getText());
+	System.out.println(od.InsCompSparangebot().getText());
+	System.out.println(od.PlanSparangebot().getText());
+	System.out.println(od.PriceSparangebot().getText());
+	System.out.println(od.InsCompTopLeistung().getText());
+	System.out.println(od.PlanTopLeistung().getText());
+	System.out.println(od.PriceTopLeistung().getText());
+	try {
+		if(offerType.equalsIgnoreCase("Sparangebot"))
+		{
+			od.ButtonSparangebot().click();
+		}
+		else if(offerType.equalsIgnoreCase("Empfehlung"))
+		{
+			od.ButtonEmpfehlung().click();
+		}
+		else if(offerType.equalsIgnoreCase("TopLeistung"))
+		{
+			od.ButtonTopLeistung().click();
+		}
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+
 
 
 }

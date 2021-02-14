@@ -1,7 +1,11 @@
 package pageObject;
 
+import java.util.ArrayList;
+
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import Utility.Generic;
 
@@ -80,6 +84,45 @@ public WebElement InsPlanPersonalInfo()
 public WebElement InsPricePersonalInfo()
 {
 	return Generic.getAnyElementByAnyLocator(driver,insPrice);
+}
+
+public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalDetails)
+{
+	
+	PersonalDetailsPage pd=new PersonalDetailsPage(driver);
+	try {
+		Actions a=new Actions(driver);
+		
+		WebElement Frau=pd.Frau();
+		a.moveToElement(Frau).sendKeys(Keys.ENTER);
+		
+		Frau.click();
+		pd.FirstName().sendKeys(personalDetails.get(0));
+		pd.StrasseName().sendKeys(personalDetails.get(1));
+		a.sendKeys(Keys.ESCAPE);
+		pd.HouseNumber().sendKeys(personalDetails.get(2));
+		a.sendKeys(Keys.ESCAPE);
+		pd.NachName().sendKeys(personalDetails.get(3));
+		a.sendKeys(Keys.ESCAPE);
+		pd.zipcode().sendKeys(personalDetails.get(6));
+		a.sendKeys(Keys.ESCAPE);
+		pd.ort().sendKeys(personalDetails.get(4));
+		a.sendKeys(Keys.ENTER);
+		pd.Telefonenummer().sendKeys(personalDetails.get(7));
+		a.sendKeys(Keys.ENTER);
+		pd.BirthDate().sendKeys(personalDetails.get(5));
+		a.sendKeys(Keys.ENTER);
+		System.out.println(pd.InsPlanPersonalInfo().getText());
+		System.out.println(pd.InsPricePersonalInfo().getText());
+		pd.SubmitPersonalInfo().click();
+	return true;
+	}
+	catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	
 }
 
 }

@@ -27,5 +27,22 @@ public WebElement Angebote()
 	return Generic.getAnyElementByAnyLocator(driver, linkAngebote);
 }
 
+public static boolean ListAngebote(WebDriver driver)
+{
+	try {
+	LandingPage l = new LandingPage(driver);
+	WebElement btnAccept=l.AcceptCookie();
+	btnAccept.click();
+	WebElement linkAngebote=l.Angebote();
+	linkAngebote.click();
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+
 }
 

@@ -34,5 +34,21 @@ public WebElement SubmitRegistration()
 	return Generic.getAnyElementByAnyLocator(driver, btnRegister);
 }
 
+public boolean Register(WebDriver driver,String userId,String password)
+{
+	RegistrationPage rp=new RegistrationPage(driver);
+	try {
+	rp.userid().sendKeys(userId);
+	rp.password().sendKeys(password);
+	rp.SubmitRegistration().click();
+	return true;
+	}
+	catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	
+}
 }
 

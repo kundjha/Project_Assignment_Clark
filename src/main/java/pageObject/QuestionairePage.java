@@ -2,6 +2,8 @@ package pageObject;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Utility.Generic;
 
@@ -87,5 +89,153 @@ public WebElement PensionInfo()
 	return Generic.getAnyElementByAnyLocator(driver,txtisPensionar);
 }
 
+
+public boolean ChooseInsuranceCategory(WebDriver driver,String inscategory)
+{
+	QuestionairePage qp=new QuestionairePage(driver);
+	try {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		WebElement whoAreCovered=qp.WhoAreCovered();
+		wait.until(ExpectedConditions.visibilityOf(whoAreCovered));
+	if(inscategory.equalsIgnoreCase("Single"))
+	{
+		
+		qp.FirstAnswer().click();
+	}
+	else if(inscategory.equalsIgnoreCase("FamilieMitKindern"))
+	{
+		qp.SecondAnswer().click();;
+	}
+	else if(inscategory.equalsIgnoreCase("PahrOhneKids"))
+	{		
+		qp.ThirdAnswer().click();
+	}
+	else if(inscategory.equalsIgnoreCase("SingleMitKindern"))
+	{		
+		qp.FourthAnswer().click();
+	}
+	
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
 }
+public boolean IsPublicServiceEmp(WebDriver driver,String isPublicServant)
+{
+	QuestionairePage qp=new QuestionairePage(driver);
+	WebDriverWait wait = new WebDriverWait(driver,30);
+	try {
+		WebElement publicService=qp.isPublicServiceEmp();
+		wait.until(ExpectedConditions.visibilityOf(publicService));
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	try {
+	if(isPublicServant.equalsIgnoreCase("Ja"))
+	{   
+		
+		qp.FirstAnswer().click();
+	
+	}
+	else if(isPublicServant.equalsIgnoreCase("Nein"))
+	{   
+			
+		qp.SecondAnswer().click();
+	}
+	
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+public boolean IsPensionar(WebDriver driver,String isPensionar)
+{
+	QuestionairePage qp=new QuestionairePage(driver);
+	WebDriverWait wait = new WebDriverWait(driver,30);
+	try {
+		WebElement pensioninfo=qp.PensionInfo();
+		wait.until(ExpectedConditions.visibilityOf(pensioninfo));
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+	try {
+	if(isPensionar.equalsIgnoreCase("Ja"))
+	{   
+		WebElement angebot=qp.AngebotAnfordern();	
+		qp.FirstAnswer().click();
+		wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+		angebot.click();
+	
+	}
+	else if(isPensionar.equalsIgnoreCase("Nein"))
+	{   
+		WebElement angebot=qp.AngebotAnfordern();	
+		qp.SecondAnswer().click();
+		wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+		angebot.click();
+	}
+	
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+public boolean NeedSelbstbeteiligung(WebDriver driver,String needSelbsteidlung)
+{
+	QuestionairePage qp=new QuestionairePage(driver);
+	WebDriverWait wait = new WebDriverWait(driver,30);
+	try {
+		WebElement qSelbSteidlung=qp.isSelbstbeteiligung();
+		wait.until(ExpectedConditions.visibilityOf(qSelbSteidlung));
+		qp.FirstAnswer().click();
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+		
+	}
+	try {
+		
+	if(needSelbsteidlung.equalsIgnoreCase("Ja"))
+	{   
+		WebElement angebot=qp.AngebotAnfordern();
+		
+		qp.FirstAnswer().click();
+		wait.until(ExpectedConditions.elementToBeClickable(angebot));
+		angebot.click();	
+	}
+	else if(needSelbsteidlung.equalsIgnoreCase("Nein"))
+	{   
+		WebElement angebot=qp.AngebotAnfordern();	
+		qp.SecondAnswer().click();
+		wait.until(ExpectedConditions.elementToBeClickable(angebot));	
+		angebot.click();	
+	}
+	return true;
+	
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+}
+
 

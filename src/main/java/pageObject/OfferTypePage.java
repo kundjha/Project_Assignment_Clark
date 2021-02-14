@@ -30,5 +30,38 @@ public WebElement BeginQuestion()
 	return Generic.getAnyElementByAnyLocator(driver, btnBeginQuestions);
 }
 
+
+public boolean ChooseInsuranceType(WebDriver driver,String instype)
+{
+	OfferTypePage ot=new OfferTypePage(driver);
+	try {
+	if(instype.equalsIgnoreCase("Privathaftpflicht"))
+	{
+		ot.optforPrivathaftpflicht().click();
+	}
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+
+public boolean BeginQuestion(WebDriver driver)
+{
+	OfferTypePage ot=new OfferTypePage(driver);
+	try {
+	ot.BeginQuestion().click();
+	return true;
+	}
+    catch(Exception ex) {
+		
+		System.out.println(ex.getMessage());
+		return false;
+	}
+}
+
+
 }
 

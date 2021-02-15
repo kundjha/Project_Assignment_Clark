@@ -141,10 +141,7 @@ public ArrayList<String> SelectOffer(WebDriver driver,String offerType)
 		
 		
 	}
-	
-	//ArrayList<String> expectedResult=new ArrayList<String>(Arrays. asList("London", "Tokyo", "New York"));
-	//ArrayList<String> cities = new ArrayList<>(Arrays. asList("London", "Tokyo", "New York"));
-	//expectedResult.get(0)=
+
 	try {
 		
 		if(offerType.equalsIgnoreCase("Sparangebot"))
@@ -161,7 +158,6 @@ public ArrayList<String> SelectOffer(WebDriver driver,String offerType)
 			System.out.println(expectedResult.get(0));
 			System.out.println(expectedResult.get(1));
 			System.out.println(expectedResult.get(2));
-			//expectedResult.add(selectedprice)
 			od.ButtonSparangebot().click();
 			
 		}

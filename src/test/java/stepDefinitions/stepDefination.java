@@ -1,65 +1,60 @@
 package stepDefinitions;
 
+
+import java.io.FileInputStream;
 import java.io.IOException;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import resources.Base;
+import Workflow.NonPublicServantWorkFlow;
+import Workflow.PublicServantWorkFlow;
 
-public class stepDefination extends Base {
-
-
-
+public class StepDefination extends Base {
+	
+	@Given("Initialize the Browser with Chrome")
+	public void initialize_the_Browser_with_Chrome() throws IOException {
+	    // Write code here that turns the phrase above into concrete actions
+		
+			driver=InitializeDriver();
+			driver.get(prop.getProperty("url"));
+			driver.manage().window().maximize();
+			
+		
+	    
+	}
 
 	@Given("Navigate to ClarkHomePage")
 	public void navigate_to_ClarkHomePage() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	    
 	}
 
-	@Given("user clicks on Angebote menu item")
-	public void user_clicks_on_Angebote_menu_item() {
+	@When("User selects Privathaftpflicht category")
+	public void user_selects_Privathaftpflicht_category() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	    
 	}
 
-	@Given("user selects Privathaftpflicht in insurance type page")
-	public void user_selects_Privathaftpflicht_in_insurance_type_page() {
+	@When("user type is  Single_PublicServant_YesDeductible")
+	public void user_type_is_Single_PublicServant_YesDeductible() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+		String filePath=System.getProperty("user.dir")+"\\Configuration\\config.properties";		
+		FileInputStream fis = new FileInputStream(filePath);
+		prop.load(fis);
+		PublicServantWorkFlow ps=new PublicServantWorkFlow();
+		String testCase="Purchase_PrivateIns_SingleMitKindern_PublicServant_YesDeductible";
+		ps.PublicServant(driver,testCase);
+	    
 	}
-
-	@When("User Selects Yes Emeployed in public service")
-	public void user_Selects_Yes_Emeployed_in_public_service() {
+	
+	
+	@Then("user is able to purchase insurance")
+	public void user_is_able_to_purchase_insurance() {
 	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
-	}
-
-	@When("user selects  Yes in Sellbeteiligung")
-	public void user_selects_Yes_in_Sellbeteiligung() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
-	}
-
-	@Then("Selected insurance is displayed in the management Page")
-	public void selected_insurance_is_displayed_in_the_management_Page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new cucumber.api.PendingException();
+	    
 	}
 
 
-    
-
-
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-
-
-
-
-}
 }

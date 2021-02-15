@@ -7,8 +7,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import Utility.ExcelUtility;
+import pageObject.AppManagerPage;
 import pageObject.BankDetailsPage;
 import pageObject.DetailsSubmittedPage;
+import pageObject.FinalThanksPage;
 import pageObject.InsuranceSummaryPage;
 import pageObject.LandingPage;
 import pageObject.OfferDetailsPage;
@@ -35,8 +37,10 @@ public class PublicServantWorkFlow extends Base {
 		RegistrationPage rp=new RegistrationPage(driver);
 		PersonalDetailsPage pd=new PersonalDetailsPage(driver);
 		ThankYouPage tp=new ThankYouPage(driver);
+		FinalThanksPage ft=new FinalThanksPage(driver);
 		OfferTypePage ot=new OfferTypePage(driver);
 		QuestionairePage qp=new QuestionairePage(driver);
+		AppManagerPage ap=new AppManagerPage(driver);
 		Actions a =new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS); 
 		lp.ListAngebote(driver);
@@ -60,19 +64,21 @@ public class PublicServantWorkFlow extends Base {
 		String password=testdata.get(2);
 		rp.Register(driver, userId, password);
 		pd.PersonalInfo(driver, testdata,expectedResult);
+		String expectedcomp=expectedResult.get(0).replaceAll("-", "");
+		System.out.println(expectedcomp);
 		start.provideStartDateDetails(driver);
 		bd.provideBankDetails(driver,iban);
 		is.acceptInsurance(driver);
-		driver.findElement(By.xpath("//a[normalize-space()='Zur Vertragsübersicht']")).click();;
-		//a[normalize-space()='Zum Angebot']
-		//Thread.sleep(4000);
+		ft.submitThanks(driver);
+		ap.InsInfoAppManager(driver,expectedcomp);
+		/*//Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']")).click();
 		//Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='_modal-content-rating-feedback_5m20r3']//a")).click();
 		a.contextClick();
 		System.out.println(driver.findElement(By.cssSelector("._title_niboal")).getText());
 		System.out.println(driver.findElement(By.cssSelector("._subtitle_niboal")).getText());
-		//a.contextClick();
+		//a.contextClick();*/
 		
 		
 }

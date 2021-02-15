@@ -1,8 +1,8 @@
 package FrameworkE2E;
 
 
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import Workflow.NonPublicServantWorkFlow;
 import Workflow.PublicServantWorkFlow;
@@ -15,7 +15,7 @@ import resources.Base;
 public class PurchaseInsurance_Single extends Base {
 	
 	 public static Logger log =LogManager.getLogger(PurchaseInsurance_Single.class.getName());
-	@BeforeMethod
+	@BeforeTest
 	public void initialize() throws IOException
 	{
 		
@@ -79,7 +79,7 @@ public class PurchaseInsurance_Single extends Base {
 		nps.NotPublicServant(driver,testCase);
 				
 	}
-	@AfterMethod
+	@AfterTest
 	public void teardown()
 	{
 		driver.close();	

@@ -1,37 +1,19 @@
 package FrameworkE2E;
 
 
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import Utility.ExcelUtility;
 import Workflow.NonPublicServantWorkFlow;
 import Workflow.PublicServantWorkFlow;
 
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.concurrent.TimeUnit;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.interactions.Actions;
-import pageObject.BankDetailsPage;
-import pageObject.InsuranceSummaryPage;
-import pageObject.OfferDetailsPage;
-import pageObject.PersonalDetailsPage;
-import pageObject.RegistrationPage;
-import pageObject.StartDatePage;
-import pageObject.ThankYouPage;
 import resources.Base;
-import resources.CommonLibrary;
 
 public class PurchaseInsurance_SingleMitKindern extends Base {
 	

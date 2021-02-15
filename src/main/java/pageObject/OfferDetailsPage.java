@@ -1,5 +1,8 @@
 package pageObject;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -118,12 +121,15 @@ public WebElement Title()
 	
 }
 
-public boolean SelectOffer(WebDriver driver,String offerType)
+public ArrayList<String> SelectOffer(WebDriver driver,String offerType)
 {
 	
 	
 	OfferDetailsPage od=new OfferDetailsPage(driver);
-	
+	String selectedComp=" ";
+	String selectedPlan=" ";
+	String selectedPrice=" ";
+	ArrayList<String> expectedResult=new ArrayList<String>();
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	try {
 		WebElement title=od.Title();
@@ -132,38 +138,68 @@ public boolean SelectOffer(WebDriver driver,String offerType)
     catch(Exception ex) {
 		
 		System.out.println(ex.getMessage());
-		return false;
+		
 		
 	}
-	System.out.println(od.InsCompEmpfehlung().getText());
-	System.out.println(od.PlanEmpfehlung().getText());
-	System.out.println(od.PriceEmpfehlung().getText());
-	System.out.println(od.InsCompSparangebot().getText());
-	System.out.println(od.PlanSparangebot().getText());
-	System.out.println(od.PriceSparangebot().getText());
-	System.out.println(od.InsCompTopLeistung().getText());
-	System.out.println(od.PlanTopLeistung().getText());
-	System.out.println(od.PriceTopLeistung().getText());
+	
+	//ArrayList<String> expectedResult=new ArrayList<String>(Arrays. asList("London", "Tokyo", "New York"));
+	//ArrayList<String> cities = new ArrayList<>(Arrays. asList("London", "Tokyo", "New York"));
+	//expectedResult.get(0)=
 	try {
+		
 		if(offerType.equalsIgnoreCase("Sparangebot"))
 		{
+			System.out.println(od.InsCompSparangebot().getText());
+			System.out.println(od.PlanSparangebot().getText());
+			System.out.println(od.PriceSparangebot().getText());
+			selectedComp=od.InsCompSparangebot().getText();
+			selectedPlan=od.PlanSparangebot().getText();
+			selectedPrice=od.PriceSparangebot().getText();
+			expectedResult.add(selectedComp);
+			expectedResult.add(selectedPlan);
+			expectedResult.add(selectedPrice);
+			System.out.println(expectedResult.get(0));
+			System.out.println(expectedResult.get(1));
+			System.out.println(expectedResult.get(2));
+			//expectedResult.add(selectedprice)
 			od.ButtonSparangebot().click();
+			
 		}
 		else if(offerType.equalsIgnoreCase("Empfehlung"))
 		{
+			System.out.println(od.InsCompEmpfehlung().getText());
+			System.out.println(od.PlanEmpfehlung().getText());
+			System.out.println(od.PriceEmpfehlung().getText());
+			expectedResult.add(selectedComp);
+			expectedResult.add(selectedPlan);
+			expectedResult.add(selectedPrice);
+			System.out.println(expectedResult.get(0));
+			System.out.println(expectedResult.get(1));
+			System.out.println(expectedResult.get(2));
 			od.ButtonEmpfehlung().click();
+			
 		}
 		else if(offerType.equalsIgnoreCase("TopLeistung"))
 		{
+			System.out.println(od.InsCompTopLeistung().getText());
+			System.out.println(od.PlanTopLeistung().getText());
+			System.out.println(od.PriceTopLeistung().getText());
+			expectedResult.add(selectedComp);
+			expectedResult.add(selectedPlan);
+			expectedResult.add(selectedPrice);
+			System.out.println(expectedResult.get(0));
+			System.out.println(expectedResult.get(1));
+			System.out.println(expectedResult.get(2));
 			od.ButtonTopLeistung().click();
 		}
-	return true;
+	
 	}
     catch(Exception ex) {
 		
 		System.out.println(ex.getMessage());
-		return false;
+	
 	}
+	return expectedResult;
 }
 
 

@@ -7,7 +7,7 @@
         <methods>
           <include name="initialize"/>
           <include name="teardown"/>
-          <include name="Purchase_PrivateIns_Single_PublicServant_YesDeductible"/>
+          <include name="Purchase_PrivateIns_Single_PublicServant_NoDeductible"/>
         </methods>
       </class> <!-- FrameworkE2E.PurchaseInsurance_Single -->
     </classes>

@@ -67,8 +67,4 @@ public boolean provideStartDateDetails(WebDriver driver)
 }
 
 }
-/*start.StartNextWd().click();
-JavascriptExecutor js = (JavascriptExecutor) driver;
-js.executeScript("window.scrollBy(0,1000)");
-start.PreviousDamage().click();
-start.SubmitStartDate().click();*/
+

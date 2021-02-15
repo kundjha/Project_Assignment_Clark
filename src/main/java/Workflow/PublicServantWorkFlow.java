@@ -2,6 +2,8 @@ package Workflow;
 
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import Utility.ExcelUtility;
@@ -50,18 +52,27 @@ public class PublicServantWorkFlow extends Base {
 		ds.ShowMyOffers(driver);
 		String offerTypeToSelect=testdata.get(14);
 		od.SelectOffer(driver, offerTypeToSelect);
+		ArrayList<String> expectedResult=od.SelectOffer(driver, offerTypeToSelect);
+		System.out.println(expectedResult.get(0));
+		System.out.println(expectedResult.get(1));
+		System.out.println(expectedResult.get(2));
 		String userId=testdata.get(1);
 		String password=testdata.get(2);
 		rp.Register(driver, userId, password);
-		pd.PersonalInfo(driver, testdata);
+		pd.PersonalInfo(driver, testdata,expectedResult);
 		start.provideStartDateDetails(driver);
 		bd.provideBankDetails(driver,iban);
 		is.acceptInsurance(driver);
-		/*Thread.sleep(4000);
+		driver.findElement(By.xpath("//a[normalize-space()='Zur Vertragsübersicht']")).click();;
+		//a[normalize-space()='Zum Angebot']
+		//Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']")).click();
-		Thread.sleep(4000);
+		//Thread.sleep(4000);
 		driver.findElement(By.xpath("//div[@class='_modal-content-rating-feedback_5m20r3']//a")).click();
-		a.contextClick();*/
+		a.contextClick();
+		System.out.println(driver.findElement(By.cssSelector("._title_niboal")).getText());
+		System.out.println(driver.findElement(By.cssSelector("._subtitle_niboal")).getText());
+		//a.contextClick();
 		
 		
 }

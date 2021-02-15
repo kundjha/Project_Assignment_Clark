@@ -1,85 +1,488 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="19" passed="14" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-14T19:04:02 IST" name="Default suite" finished-at="2021-02-14T19:15:17 IST" duration-ms="675253">
+  <suite started-at="2021-02-15T10:31:37 IST" name="Suite" finished-at="2021-02-15T11:06:43 IST" duration-ms="2106465">
     <groups>
     </groups>
-    <test started-at="2021-02-14T19:04:02 IST" name="Default test" finished-at="2021-02-14T19:15:17 IST" duration-ms="675253">
-      <class name="FrameworkE2E.PurchaseInsurance_Single">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:04:02 IST" name="initialize" finished-at="2021-02-14T19:04:25 IST" duration-ms="23021" status="PASS">
+    <test started-at="2021-02-15T10:31:37 IST" name="Test" finished-at="2021-02-15T11:06:43 IST" duration-ms="2106465">
+      <class name="FrameworkE2E.PurchaseInsurance_SingleMitKindern">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:56:50 IST" name="initialize" finished-at="2021-02-15T10:57:11 IST" duration-ms="20181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_NotDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:04:25 IST" name="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_NotDeductible" finished-at="2021-02-14T19:05:30 IST" duration-ms="65322" status="PASS">
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_NotDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:57:11 IST" name="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_NotDeductible" finished-at="2021-02-15T10:58:03 IST" duration-ms="52398" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_NotDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:58:03 IST" name="teardown" finished-at="2021-02-15T10:58:03 IST" duration-ms="292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:58:03 IST" name="initialize" finished-at="2021-02-15T10:58:26 IST" duration-ms="22021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:58:26 IST" name="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_YesDeductible" finished-at="2021-02-15T10:59:34 IST" duration-ms="68222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_NotPublicServant_NotPensionar_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:59:34 IST" name="teardown" finished-at="2021-02-15T10:59:35 IST" duration-ms="1218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:59:35 IST" name="initialize" finished-at="2021-02-15T10:59:54 IST" duration-ms="18655" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_NoDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T10:59:54 IST" name="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_NoDeductible" finished-at="2021-02-15T11:01:00 IST" duration-ms="66485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_NoDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:01:00 IST" name="teardown" finished-at="2021-02-15T11:01:01 IST" duration-ms="693" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:01:01 IST" name="initialize" finished-at="2021-02-15T11:01:15 IST" duration-ms="14592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:01:15 IST" name="Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_YesDeductible" finished-at="2021-02-15T11:02:09 IST" duration-ms="53661" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_NotPublicServant_YesPensionar_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:02:09 IST" name="teardown" finished-at="2021-02-15T11:02:10 IST" duration-ms="862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:02:10 IST" name="initialize" finished-at="2021-02-15T11:02:25 IST" duration-ms="15470" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_PublicServant_YesDeductible()[pri:1, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:02:25 IST" name="Purchase_PrivateIns_SingleMitKindern_PublicServant_YesDeductible" finished-at="2021-02-15T11:02:46 IST" duration-ms="20969" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_PublicServant_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:02:46 IST" name="teardown" finished-at="2021-02-15T11:02:47 IST" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:02:47 IST" name="initialize" finished-at="2021-02-15T11:03:01 IST" duration-ms="14574" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_SingleMitKindern_PublicServant_NoDeductible()[pri:2, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:03:01 IST" name="Purchase_PrivateIns_SingleMitKindern_PublicServant_NoDeductible" finished-at="2021-02-15T11:06:42 IST" duration-ms="220807" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 0 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at Workflow.PublicServantWorkFlow.PublicServant(PublicServantWorkFlow.java:56)
+at FrameworkE2E.PurchaseInsurance_SingleMitKindern.Purchase_PrivateIns_SingleMitKindern_PublicServant_NoDeductible(PurchaseInsurance_SingleMitKindern.java:69)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_SingleMitKindern_PublicServant_NoDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_SingleMitKindern@62f68dff]" started-at="2021-02-15T11:06:43 IST" name="teardown" finished-at="2021-02-15T11:06:43 IST" duration-ms="232" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- FrameworkE2E.PurchaseInsurance_SingleMitKindern -->
+      <class name="FrameworkE2E.PurchaseInsurance_FamilieMitKindern">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_FamilieMitKindern@463b4ac8]" started-at="2021-02-15T10:44:49 IST" name="initialize" finished-at="2021-02-15T10:45:08 IST" duration-ms="19521" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_FamilieMitKindern_PublicServant_YesDeductible()[pri:1, instance:FrameworkE2E.PurchaseInsurance_FamilieMitKindern@463b4ac8]" started-at="2021-02-15T10:45:08 IST" name="Purchase_PrivateIns_FamilieMitKindern_PublicServant_YesDeductible" finished-at="2021-02-15T10:45:43 IST" duration-ms="34691" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_FamilieMitKindern_PublicServant_YesDeductible -->
+      </class> <!-- FrameworkE2E.PurchaseInsurance_FamilieMitKindern -->
+      <class name="FrameworkE2E.PurchaseInsurance_Single">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:31:37 IST" name="initialize" finished-at="2021-02-15T10:32:12 IST" duration-ms="35333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_NotDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:32:12 IST" name="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_NotDeductible" finished-at="2021-02-15T10:33:43 IST" duration-ms="91242" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_NotDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:05:30 IST" name="teardown" finished-at="2021-02-14T19:05:31 IST" duration-ms="753" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:33:44 IST" name="teardown" finished-at="2021-02-15T10:33:47 IST" duration-ms="2923" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:05:31 IST" name="initialize" finished-at="2021-02-14T19:05:49 IST" duration-ms="17652" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:33:47 IST" name="initialize" finished-at="2021-02-15T10:34:10 IST" duration-ms="22287" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:05:49 IST" name="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible" finished-at="2021-02-14T19:06:38 IST" duration-ms="49280" status="PASS">
+        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:34:10 IST" name="Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible" finished-at="2021-02-15T10:35:19 IST" duration-ms="69160" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_NotPublicServant_NotPensionar_YesDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:06:38 IST" name="teardown" finished-at="2021-02-14T19:06:40 IST" duration-ms="1634" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:35:19 IST" name="teardown" finished-at="2021-02-15T10:35:21 IST" duration-ms="2024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:06:40 IST" name="initialize" finished-at="2021-02-14T19:06:56 IST" duration-ms="16339" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:35:21 IST" name="initialize" finished-at="2021-02-15T10:35:47 IST" duration-ms="25672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:06:56 IST" name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible" finished-at="2021-02-14T19:07:45 IST" duration-ms="48574" status="PASS">
+        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:35:47 IST" name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible" finished-at="2021-02-15T10:36:39 IST" duration-ms="52676" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_NoDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:07:45 IST" name="teardown" finished-at="2021-02-14T19:07:47 IST" duration-ms="2770" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:36:39 IST" name="teardown" finished-at="2021-02-15T10:36:39 IST" duration-ms="131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:07:47 IST" name="initialize" finished-at="2021-02-14T19:08:08 IST" duration-ms="20793" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:36:39 IST" name="initialize" finished-at="2021-02-15T10:37:03 IST" duration-ms="24034" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:08:08 IST" name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible" finished-at="2021-02-14T19:12:52 IST" duration-ms="283838" status="PASS">
+        <test-method signature="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:37:03 IST" name="Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible" finished-at="2021-02-15T10:39:51 IST" duration-ms="167319" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 0 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at Workflow.NonPublicServantWorkFlow.NotPublicServant(NonPublicServantWorkFlow.java:59)
+at FrameworkE2E.PurchaseInsurance_Single.Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible(PurchaseInsurance_Single.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_NotPublicServant_YesPensionar_YesDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:12:52 IST" name="teardown" finished-at="2021-02-14T19:12:54 IST" duration-ms="2258" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:39:52 IST" name="teardown" finished-at="2021-02-15T10:39:52 IST" duration-ms="152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:12:55 IST" name="initialize" finished-at="2021-02-14T19:13:20 IST" duration-ms="25871" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:39:52 IST" name="initialize" finished-at="2021-02-15T10:40:07 IST" duration-ms="14803" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_PublicServant_YesDeductible()[pri:1, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:13:20 IST" name="Purchase_PrivateIns_Single_PublicServant_YesDeductible" finished-at="2021-02-14T19:13:58 IST" duration-ms="38075" status="PASS">
+        <test-method signature="Purchase_PrivateIns_Single_PublicServant_YesDeductible()[pri:1, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:40:07 IST" name="Purchase_PrivateIns_Single_PublicServant_YesDeductible" finished-at="2021-02-15T10:43:48 IST" duration-ms="221086" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 0 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at Workflow.PublicServantWorkFlow.PublicServant(PublicServantWorkFlow.java:56)
+at FrameworkE2E.PurchaseInsurance_Single.Purchase_PrivateIns_Single_PublicServant_YesDeductible(PurchaseInsurance_Single.java:37)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_PublicServant_YesDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:13:59 IST" name="teardown" finished-at="2021-02-14T19:14:24 IST" duration-ms="25363" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:43:48 IST" name="teardown" finished-at="2021-02-15T10:43:49 IST" duration-ms="976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:14:24 IST" name="initialize" finished-at="2021-02-14T19:14:49 IST" duration-ms="24502" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:43:49 IST" name="initialize" finished-at="2021-02-15T10:44:04 IST" duration-ms="14934" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="Purchase_PrivateIns_Single_PublicServant_NoDeductible()[pri:2, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:14:49 IST" name="Purchase_PrivateIns_Single_PublicServant_NoDeductible" finished-at="2021-02-14T19:15:15 IST" duration-ms="26036" status="PASS">
+        <test-method signature="Purchase_PrivateIns_Single_PublicServant_NoDeductible()[pri:2, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:44:04 IST" name="Purchase_PrivateIns_Single_PublicServant_NoDeductible" finished-at="2021-02-15T10:44:47 IST" duration-ms="42439" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Purchase_PrivateIns_Single_PublicServant_NoDeductible -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@479ceda0]" started-at="2021-02-14T19:15:15 IST" name="teardown" finished-at="2021-02-14T19:15:16 IST" duration-ms="1644" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_Single@18cebaa5]" started-at="2021-02-15T10:44:47 IST" name="teardown" finished-at="2021-02-15T10:44:49 IST" duration-ms="1849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- FrameworkE2E.PurchaseInsurance_Single -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="FrameworkE2E.PurchaseInsurance_PahrOhneKids">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:45:43 IST" name="initialize" finished-at="2021-02-15T10:46:18 IST" duration-ms="34315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_NotDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:46:18 IST" name="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_NotDeductible" finished-at="2021-02-15T10:47:38 IST" duration-ms="80462" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-C89KGQR', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2f0f933f64ca04ebaae3169f96270e94
+*** Element info: {Using=xpath, value=//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']"}
+  (Session info: chrome=88.0.4324.150)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-C89KGQR', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.150, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\hp\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:61031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 2f0f933f64ca04ebaae3169f96270e94
+*** Element info: {Using=xpath, value=//button[@class='ember-view _button_dsfphm _appearance-secondary_dsfphm _size-medium_dsfphm']}
+at jdk.internal.reflect.GeneratedConstructorAccessor29.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at Workflow.NonPublicServantWorkFlow.NotPublicServant(NonPublicServantWorkFlow.java:72)
+at FrameworkE2E.PurchaseInsurance_PahrOhneKids.Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_NotDeductible(PurchaseInsurance_PahrOhneKids.java:79)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_NotDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:47:55 IST" name="teardown" finished-at="2021-02-15T10:47:58 IST" duration-ms="3359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:47:58 IST" name="initialize" finished-at="2021-02-15T10:48:34 IST" duration-ms="35811" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:48:34 IST" name="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_YesDeductible" finished-at="2021-02-15T10:49:32 IST" duration-ms="57606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_NotPublicServant_NotPensionar_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:49:32 IST" name="teardown" finished-at="2021-02-15T10:49:37 IST" duration-ms="5895" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:49:37 IST" name="initialize" finished-at="2021-02-15T10:49:56 IST" duration-ms="18335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_NoDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:49:56 IST" name="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_NoDeductible" finished-at="2021-02-15T10:50:47 IST" duration-ms="51473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_NoDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:50:47 IST" name="teardown" finished-at="2021-02-15T10:50:48 IST" duration-ms="836" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:50:48 IST" name="initialize" finished-at="2021-02-15T10:51:03 IST" duration-ms="15006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_YesDeductible()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:51:03 IST" name="Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_YesDeductible" finished-at="2021-02-15T10:55:04 IST" duration-ms="240986" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 0 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+at java.base/java.util.Objects.checkIndex(Objects.java:359)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at Workflow.NonPublicServantWorkFlow.NotPublicServant(NonPublicServantWorkFlow.java:59)
+at FrameworkE2E.PurchaseInsurance_PahrOhneKids.Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_YesDeductible(PurchaseInsurance_PahrOhneKids.java:55)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_NotPublicServant_YesPensionar_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:55:05 IST" name="teardown" finished-at="2021-02-15T10:55:08 IST" duration-ms="3302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:55:08 IST" name="initialize" finished-at="2021-02-15T10:55:25 IST" duration-ms="17316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_PublicServant_YesDeductible()[pri:1, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:55:25 IST" name="Purchase_PrivateIns_PahrOhneKids_PublicServant_YesDeductible" finished-at="2021-02-15T10:55:56 IST" duration-ms="30127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_PublicServant_YesDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:55:56 IST" name="teardown" finished-at="2021-02-15T10:55:58 IST" duration-ms="2226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:55:58 IST" name="initialize" finished-at="2021-02-15T10:56:16 IST" duration-ms="18149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="Purchase_PrivateIns_PahrOhneKids_PublicServant_NoDeductible()[pri:2, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:56:16 IST" name="Purchase_PrivateIns_PahrOhneKids_PublicServant_NoDeductible" finished-at="2021-02-15T10:56:49 IST" duration-ms="32760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Purchase_PrivateIns_PahrOhneKids_PublicServant_NoDeductible -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:FrameworkE2E.PurchaseInsurance_PahrOhneKids@765f05af]" started-at="2021-02-15T10:56:49 IST" name="teardown" finished-at="2021-02-15T10:56:50 IST" duration-ms="1656" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- FrameworkE2E.PurchaseInsurance_PahrOhneKids -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

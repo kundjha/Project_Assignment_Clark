@@ -86,7 +86,7 @@ public WebElement InsPricePersonalInfo()
 	return Generic.getAnyElementByAnyLocator(driver,insPrice);
 }
 
-public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalInfodata)
+public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalInfodata, ArrayList<String> expectedResult)
 {
 	
 	PersonalDetailsPage pd=new PersonalDetailsPage(driver);
@@ -132,6 +132,11 @@ public boolean PersonalInfo(WebDriver driver,ArrayList<String> personalInfodata)
 		a.sendKeys(Keys.ENTER);
 		System.out.println(InsPlanPersonalInfo().getText());
 		System.out.println(InsPricePersonalInfo().getText());
+		if(InsPlanPersonalInfo().getText().equalsIgnoreCase(expectedResult.get(1)))
+			System.out.println("Hurray!!!");
+		if(InsPricePersonalInfo().getText().equalsIgnoreCase(expectedResult.get(2)))
+			System.out.println("Hurray!!! Again!!!");
+		
 		SubmitPersonalInfo().click();
 	return true;
 	}
